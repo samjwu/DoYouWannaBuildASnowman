@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<tw-story tags></tw-story>
-		<tw-storydata name="Do You Wanna Build A Snowman" startnode="1" creator="Twine" creator-version="2.4.1" format="Snowman" format-version="2.0.2" ifid="2F50962E-1E6A-4426-AA63-362B03D6336B" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"><style>
+		<tw-storydata name="Do You Wanna Build A Snowman" startnode="7" creator="Twine" creator-version="2.4.1" format="Snowman" format-version="2.0.2" ifid="2F50962E-1E6A-4426-AA63-362B03D6336B" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"><style>
   h1 {text-align: center;}
   p {text-align: center;}
   div {text-align: center;}
@@ -24,7 +24,14 @@
   .full {
     width: 100%;
   }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="200,200" size="100,100">&lt;div&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">var audio = document.createElement('audio');
+document.body.appendChild(audio);
+audio.src = 'aud/Do You Want To Build a Snowman.mp3';
+audio.muted = false;
+audio.loop = true;
+document.body.addEventListener("mousemove", function () {
+    audio.play()
+})</script><tw-passagedata pid="1" name="Start" tags="" position="300,300" size="100,100">&lt;div&gt;
 
 &lt;img src=&quot;img/start.jpg&quot; class=&quot;center&quot;&gt;
 
@@ -40,13 +47,13 @@ Do you wanna build a snowman?
 
 [[Can you repeat the question?|Start]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Snowman" tags="" position="600,200" size="100,100">&lt;div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Snowman" tags="" position="700,300" size="100,100">&lt;div&gt;
 
 &lt;img src=&quot;img/snowman.png&quot; class=&quot;center full&quot;&gt;
 
 You built a snowman!
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Positive Question" tags="" position="400,200" size="100,100">&lt;div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Positive Question" tags="" position="500,300" size="100,100">&lt;div&gt;
 
 &lt;img src=&quot;img/positive.jpg&quot; class=&quot;center&quot;&gt;
 
@@ -75,7 +82,7 @@ print(positive[randomInt]);
 
 [[Can you repeat the question?|Start]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Negative Question" tags="" position="400,400" size="100,100">&lt;div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Negative Question" tags="" position="500,500" size="100,100">&lt;div&gt;
 
 &lt;img src=&quot;img/negative.jpg&quot; class=&quot;center&quot;&gt;
 
@@ -104,17 +111,21 @@ print(negative[randomInt]);
 
 [[Can you repeat the question?|Start]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Maybe" tags="" position="200,400" size="100,100">&lt;div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Maybe" tags="" position="300,500" size="100,100">&lt;div&gt;
 
 &lt;img src=&quot;img/maybe.png&quot; class=&quot;center full&quot;&gt;
 
 [[What do you mean &quot;maybe&quot;? Just answer the question!|Start]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="I don&#39;t know" tags="" position="200,600" size="100,100">&lt;div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="I don&#39;t know" tags="" position="300,700" size="100,100">&lt;div&gt;
 
 &lt;img src=&quot;img/idontknow.png&quot; class=&quot;center&quot;&gt;
 
 [[What do you mean &quot;I don&#39;t know&quot;? It&#39;s a yes or no question!|Start]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Game Start" tags="" position="100,100" size="100,100">&lt;div&gt;
+
+[[Start]] 
 
 &lt;/div&gt;</tw-passagedata></tw-storydata>
 		<script>
